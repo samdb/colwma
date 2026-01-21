@@ -60,10 +60,11 @@ export default function PastWinners() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="h-full"
             >
               <Link
                 href={`/${yearData.year}`}
-                className="block group relative p-6 lg:p-8 bg-navy-900/50 border border-navy-700/50 hover:border-gold-500/50 transition-all card-lift"
+                className="flex flex-col h-full group relative p-6 lg:p-8 bg-navy-900/50 border border-navy-700/50 hover:border-gold-500/50 transition-all card-lift"
               >
                 {/* Year badge */}
                 <div className="text-5xl lg:text-6xl font-[family-name:var(--font-display)] text-gold-400 mb-6 group-hover:text-gold-300 transition-colors">
@@ -75,7 +76,7 @@ export default function PastWinners() {
 
                 {/* Top winner preview */}
                 {yearData.companyWinners[0] && (
-                  <div className="border-t border-navy-700/50 pt-4 mt-4">
+                  <div className="border-t border-navy-700/50 pt-4 mt-auto">
                     <div className="text-cream-100/40 text-xs uppercase tracking-wider mb-1">
                       Company of the Year
                     </div>
