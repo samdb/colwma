@@ -49,11 +49,11 @@ export function getGalleryImages(year: string): string[] {
   const altPath = path.join(GALLERY_BASE_PATH, `${year}-img`);
 
   let targetPath = yearPath;
-  let targetUrl = `/images/gallery/${year}`;
+  let targetUrl = `/colwma/images/gallery/${year}`;
 
   if (!fs.existsSync(yearPath) && fs.existsSync(altPath)) {
     targetPath = altPath;
-    targetUrl = `/images/gallery/${year}-img`;
+    targetUrl = `/colwma/images/gallery/${year}-img`;
   }
 
   // Special handling for 2023 which uses 2023-img folder
@@ -61,7 +61,7 @@ export function getGalleryImages(year: string): string[] {
     const img2023Path = path.join(GALLERY_BASE_PATH, '2023-img');
     if (fs.existsSync(img2023Path)) {
       targetPath = img2023Path;
-      targetUrl = '/images/gallery/2023-img';
+      targetUrl = '/colwma/images/gallery/2023-img';
     }
   }
 

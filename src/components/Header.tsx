@@ -36,7 +36,7 @@ export default function Header() {
           <Link href="/" className="relative z-10 group">
             <div className="relative h-12 w-auto lg:h-16">
               <Image
-                src="/images/logo.png"
+                src="/colwma/images/logo.png"
                 alt="COLWMA - City of London Wealth Management Awards"
                 width={200}
                 height={64}
